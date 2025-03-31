@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Scrapped Data</h1>
+        <div class="controls">
+            <button id="random-quote-btn">Random Quote</button>
+            <select id="author-filter">
+                <option value="">All Authors</option>
+            </select>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search quotes...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="featured-quote" class="card">
+            <blockquote id="featured-text"></blockquote>
+            <cite id="featured-author"></cite>
+            <div id="featured-tags"></div>
+        </section>
+
+        <section id="quotes-container"></section>
+    </main>
+
+    <footer style="position: sticky; bottom: 0; width: 100%; text-align: center; background-color: #f0f0f0; padding: 10px;">
+        <p>Created with Scrapy & Flask by Hammad <a href="http://quotes.toscrape.com">Quotes to Scrape</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
